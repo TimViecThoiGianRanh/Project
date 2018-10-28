@@ -1,0 +1,9 @@
+D:\Downloads\TimViec\Business_Tier\bin\Debug\Business_Tier.dll
+D:\Downloads\TimViec\Business_Tier\bin\Debug\Business_Tier.pdb
+D:\Downloads\TimViec\Business_Tier\bin\Debug\Data_Tier.dll
+D:\Downloads\TimViec\Business_Tier\bin\Debug\Entities.dll
+D:\Downloads\TimViec\Business_Tier\bin\Debug\Data_Tier.pdb
+D:\Downloads\TimViec\Business_Tier\bin\Debug\Entities.pdb
+D:\Downloads\TimViec\Business_Tier\obj\Debug\Business_Tier.csprojResolveAssemblyReference.cache
+D:\Downloads\TimViec\Business_Tier\obj\Debug\Business_Tier.dll
+D:\Downloads\TimViec\Business_Tier\obj\Debug\Business_Tier.pdb

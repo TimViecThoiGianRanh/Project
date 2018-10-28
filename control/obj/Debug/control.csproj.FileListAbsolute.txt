@@ -1,0 +1,8 @@
+D:\TimViec\control\bin\Debug\control.dll
+D:\TimViec\control\bin\Debug\control.pdb
+D:\TimViec\control\obj\Debug\control.baidang.resources
+D:\TimViec\control\obj\Debug\control.csproj.GenerateResource.Cache
+D:\TimViec\control\obj\Debug\control.dll.licenses
+D:\TimViec\control\obj\Debug\control.dll
+D:\TimViec\control\obj\Debug\control.pdb
+D:\TimViec\control\obj\Debug\control.csprojResolveAssemblyReference.cache

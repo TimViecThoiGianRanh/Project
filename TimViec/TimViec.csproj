@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B518BD35-F7D5-4268-89D8-FF496E694F75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimViec</RootNamespace>
+    <AssemblyName>TimViec</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DangTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangTin.Designer.cs">
+      <DependentUpon>DangTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\accountDAO.cs" />
+    <Compile Include="frmbaidang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbaidang.Designer.cs">
+      <DependentUpon>frmbaidang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmain.Designer.cs">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmquanlycv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmquanlycv.Designer.cs">
+      <DependentUpon>frmquanlycv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmquanlytaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmquanlytaikhoan.Designer.cs">
+      <DependentUpon>frmquanlytaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="dangnhapquanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangnhapquanly.Designer.cs">
+      <DependentUpon>dangnhapquanly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="themthongtin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="themthongtin.Designer.cs">
+      <DependentUpon>themthongtin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thongtin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thongtin.Designer.cs">
+      <DependentUpon>Thongtin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DangTin.resx">
+      <DependentUpon>DangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbaidang.resx">
+      <DependentUpon>frmbaidang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmain.resx">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmquanlycv.resx">
+      <DependentUpon>frmquanlycv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmquanlytaikhoan.resx">
+      <DependentUpon>frmquanlytaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="dangnhapquanly.resx">
+      <DependentUpon>dangnhapquanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themthongtin.resx">
+      <DependentUpon>themthongtin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thongtin.resx">
+      <DependentUpon>Thongtin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\nd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Admin-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\dx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\doimatkhau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\thongtin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{f05959db-47f5-4895-b1c7-e1595704c873}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\control\control.csproj">
+      <Project>{6a2e4a94-414c-4744-9a29-b437834fb811}</Project>
+      <Name>control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LinQ\LinQ.csproj">
+      <Project>{ac9f1e83-c298-4c24-a7cd-90ed0b440731}</Project>
+      <Name>LinQ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\vl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Button-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Button-Add-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Text-Edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Button-Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\Button-Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\816.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

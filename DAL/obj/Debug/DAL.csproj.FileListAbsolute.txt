@@ -1,0 +1,6 @@
+D:\TimViec\DAL\bin\Debug\DAL.dll.config
+D:\TimViec\DAL\bin\Debug\DAL.dll
+D:\TimViec\DAL\bin\Debug\DAL.pdb
+D:\TimViec\DAL\obj\Debug\DAL.dll
+D:\TimViec\DAL\obj\Debug\DAL.pdb
+D:\TimViec\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

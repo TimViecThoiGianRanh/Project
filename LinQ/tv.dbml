@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_TimViec" Class="tvDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-E7OLK4E\SQLEXPRESS;Initial Catalog=QL_TimViec;Integrated Security=True" SettingsObjectName="LinQ.Properties.Settings" SettingsPropertyName="QL_TimViecConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.account" Member="accounts">
+    <Type Name="account">
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tinhtrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="account_KhachHang" Member="KhachHangs" ThisKey="username" OtherKey="username" Type="KhachHang" />
+      <Association Name="account_quantri" Member="quantris" ThisKey="username" OtherKey="username" Type="quantri" />
+      <Association Name="account_tuyendung" Member="tuyendungs" ThisKey="username" OtherKey="username" Type="tuyendung" />
+    </Type>
+  </Table>
+  <Table Name="dbo.baidang" Member="baidangs">
+    <Type Name="baidang">
+      <Column Name="mabd" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="manhatd" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="macv" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaydang" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="baidang_chitietbd" Member="chitietbds" ThisKey="mabd" OtherKey="mabd" Type="chitietbd" />
+      <Association Name="baidang_dangky" Member="dangkies" ThisKey="mabd" OtherKey="mabd" Type="dangky" />
+      <Association Name="congviec_baidang" Member="congviec" ThisKey="macv" OtherKey="macv" Type="congviec" IsForeignKey="true" />
+      <Association Name="tuyendung_baidang" Member="tuyendung" ThisKey="manhatd" OtherKey="manhatd" Type="tuyendung" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chitietbd" Member="chitietbds">
+    <Type Name="chitietbd">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mabd" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="tencty" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="yeucau" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="noidung" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="baidang_chitietbd" Member="baidang" ThisKey="mabd" OtherKey="mabd" Type="baidang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.congviec" Member="congviecs">
+    <Type Name="congviec">
+      <Column Name="macv" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tencv" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="maloai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="congviec_baidang" Member="baidangs" ThisKey="macv" OtherKey="macv" Type="baidang" />
+      <Association Name="loaicongviec_congviec" Member="loaicongviec" ThisKey="maloai" OtherKey="maloai" Type="loaicongviec" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dangky" Member="dangkies">
+    <Type Name="dangky">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mabd" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="makh" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="baidang_dangky" Member="baidang" ThisKey="mabd" OtherKey="mabd" Type="baidang" IsForeignKey="true" />
+      <Association Name="KhachHang_dangky" Member="KhachHang" ThisKey="makh" OtherKey="makh" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="makh" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenkh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="KhachHang_dangky" Member="dangkies" ThisKey="makh" OtherKey="makh" Type="dangky" />
+      <Association Name="account_KhachHang" Member="account" ThisKey="username" OtherKey="username" Type="account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.loaicongviec" Member="loaicongviecs">
+    <Type Name="loaicongviec">
+      <Column Name="maloai" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenloai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="loaicongviec_congviec" Member="congviecs" ThisKey="maloai" OtherKey="maloai" Type="congviec" />
+    </Type>
+  </Table>
+  <Table Name="dbo.quantri" Member="quantris">
+    <Type Name="quantri">
+      <Column Name="maqt" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenqt" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="account_quantri" Member="account" ThisKey="username" OtherKey="username" Type="account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tuyendung" Member="tuyendungs">
+    <Type Name="tuyendung">
+      <Column Name="manhatd" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tennhatd" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tuyendung_baidang" Member="baidangs" ThisKey="manhatd" OtherKey="manhatd" Type="baidang" />
+      <Association Name="account_tuyendung" Member="account" ThisKey="username" OtherKey="username" Type="account" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,6 @@
+D:\TimViec\LinQ\bin\Debug\LinQ.dll.config
+D:\TimViec\LinQ\bin\Debug\LinQ.dll
+D:\TimViec\LinQ\bin\Debug\LinQ.pdb
+D:\TimViec\LinQ\obj\Debug\LinQ.dll
+D:\TimViec\LinQ\obj\Debug\LinQ.pdb
+D:\TimViec\LinQ\obj\Debug\LinQ.csprojResolveAssemblyReference.cache

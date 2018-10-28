@@ -1,0 +1,7 @@
+D:\Downloads\TimViec\Data_Tier\bin\Debug\Data_Tier.dll
+D:\Downloads\TimViec\Data_Tier\bin\Debug\Data_Tier.pdb
+D:\Downloads\TimViec\Data_Tier\bin\Debug\Entities.dll
+D:\Downloads\TimViec\Data_Tier\bin\Debug\Entities.pdb
+D:\Downloads\TimViec\Data_Tier\obj\Debug\Data_Tier.csprojResolveAssemblyReference.cache
+D:\Downloads\TimViec\Data_Tier\obj\Debug\Data_Tier.dll
+D:\Downloads\TimViec\Data_Tier\obj\Debug\Data_Tier.pdb
